@@ -5,7 +5,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
     entry: [
-        'babel-polyfill',
         './index.js'
     ],
     output: {
@@ -19,22 +18,6 @@ const config = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: [
-                            ['env', {
-                                targets: {
-                                    browsers: [
-                                        '>0.25%',
-                                        'not ie 11',
-                                        'not op_mini all'
-                                    ]
-                                }
-                            }],
-                        ]
-                    }
-                }
             },
             {
                 test: /\.scss$/,
