@@ -1,0 +1,37 @@
+
+    <template id="b-header">
+        <nav>Menu</nav>
+        <div>fpjwpjtpgjwp</div>
+    </template>
+    
+    <script>
+        class Header extends HTMLElement {
+            constructor() {
+                super();
+                this.init();
+            }
+
+            init() {
+                const template = document.getElementById('b-header');
+                const templateContent = template.content;
+
+
+                const shadowRoot = this.attachShadow({mode: 'open'})
+                    .appendChild(templateContent.cloneNode(true));
+            }
+
+            connectedCallback() {
+                console.log('connected');
+            }
+    
+            disconnectedCallback() {
+                console.log('destroy');
+            }
+    
+            attributeChangedCallback(attrName, oldVal, newVal) {
+                console.log(attrName, oldVal, newVal);
+            }
+        }
+    
+        customElements.define('b-header', Header);
+    </script>
