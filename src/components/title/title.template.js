@@ -1,9 +1,9 @@
 export default (function() {
     const template = document.createElement('template');
+
     template.innerHTML = `
-        <header class="header">
-            <nav>Menu</nav>
-        </header>
+        <h1></h1>
     `;
+
     return template.content;
 })();

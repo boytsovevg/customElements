@@ -1,3 +1,4 @@
-import { Header } from './components/header.element';
+import styles from './styles/styles.scss';
 
-window.customElements.define('b-header', Header);
+import { Header, Title } from './components';
+
