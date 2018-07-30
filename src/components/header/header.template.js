@@ -3,13 +3,9 @@ export default (function() {
     template.innerHTML = `
         <style>
             :host {
-                all: initial;
                 display: block;
                 padding: 20px;
-            }
-
-            h1 {
-                margin: 0;
+                text-align: center;
             }
         </style>
 
