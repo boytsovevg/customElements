@@ -4,7 +4,7 @@ export default (function() {
         <style>
             :host {
                 display: block;
-                padding: 20px;
+                padding: 18px;
                 text-align: center;
             }
         </style>
