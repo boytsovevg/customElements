@@ -15,6 +15,9 @@ export default (function(){
             this.addEventListener('delete-data', () => this.deleteData());
             this.addEventListener('activate-coffee', () => this.activateCoffee());
             this.addEventListener('activate-toster', () => this.activateToster());
+
+            this.panelName = this.getAttribute('panel-name');
+            this.shadowRoot.querySelector('b-title').setAttribute('text', this.panelName);
         }
 
         loadData() {
@@ -34,7 +37,10 @@ export default (function(){
         }
 
         disconnectedCallback() {
-            this.addEventListener('bes-button.click', () => this.loadData());
+            this.addEventListener('load-data', () => this.loadData());
+            this.addEventListener('delete-data', () => this.deleteData());
+            this.addEventListener('activate-coffee', () => this.activateCoffee());
+            this.addEventListener('activate-toster', () => this.activateToster());
         }
     }
 

@@ -18,7 +18,7 @@ export default (
             </style>
 
             <div class="panel">
-                <b-title text="Моя панель"></b-title>
+                <b-title></b-title>
                 <slot></slot>
             </div>
         `;
