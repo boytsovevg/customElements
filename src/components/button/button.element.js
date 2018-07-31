@@ -11,6 +11,25 @@ export default (function() {
         _init() {
             this.attachShadow({ mode: 'open' });
             this.shadowRoot.appendChild(content.cloneNode(true));
+
+            this.events = {
+                click: new CustomEvent('bes-button.click', {
+                    bubbles: true,
+                    detail: { opened: true }
+                })
+            };
+        }
+
+        onClick() {
+            this.dispatchEvent(this.events.click);
+        }
+
+        connectedCallback() {
+            this.addEventListener('click', () => this.onClick());
+        }
+
+        disconnectedCallback() {
+            this.removeEventListener('click', () => this.onClick())
         }
     }
 

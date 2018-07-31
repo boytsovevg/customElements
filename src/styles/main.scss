@@ -4,3 +4,13 @@ html {
     font-family: 'PT Sans', sans-serif;
 }
 
+section {
+    max-width: 900px;
+    margin: 0 auto;
+
+    bes-panel {
+        bes-button {
+            margin-bottom: 10px;
+        }
+    }
+}

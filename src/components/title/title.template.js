@@ -3,6 +3,10 @@ export default (function() {
 
     template.innerHTML = `
         <style>
+            :host {
+                display: inline-block;
+            }
+
             h1 {
                 margin: 0;
                 font-size: 1.5em;

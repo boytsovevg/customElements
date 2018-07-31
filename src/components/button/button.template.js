@@ -8,7 +8,7 @@ export default (function(){
             }
 
             button {
-                padding: 10px 20px;
+                padding: 10px 12px;
                 border-radius: 3px;
                 border-style: none;
                 background-color: #16c79e;
