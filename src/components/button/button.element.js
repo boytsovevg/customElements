@@ -8,6 +8,10 @@ export default (function() {
             this._init();
         }
 
+        static get observedAttributes() {
+            return ['color'];
+        }
+
         get color() {
             return this.getAttribute('color');
         }
@@ -19,10 +23,13 @@ export default (function() {
         _init() {
             this.attachShadow({ mode: 'open' });
             this.shadowRoot.appendChild(content.cloneNode(true));
+
+            this.button = this.shadowRoot.querySelector('button');
         }
 
         onClick() {
             this.dispatchEvent(this.events[this.eventName]);
+            this.color = '#0a2e5c';
         }
 
         connectedCallback() {
@@ -35,13 +42,12 @@ export default (function() {
                     detail: { opened: true }
                 })
             };
-
-            this.button = this.shadowRoot.querySelector('button');
+            
             this.button.style.backgroundColor = this.color;
         }
 
         attributeChangedCallback(name, oldValue, newValue) {
-            this.button.style.backgroundColor = this.color;
+            this.button.style.backgroundColor = newValue;
         }
 
         disconnectedCallback() {
