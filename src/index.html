@@ -7,11 +7,15 @@
     <title>Веб страница</title>
 </head>
 <body>
+    <b-header></b-header>
     <section>
-        <b-header></b-header>
         <bes-panel>
-            <bes-button>Загрузить данные</bes-button>
-            <bes-button>Удалить данные</bes-button>
+            <bes-button event="load-data">Загрузить данные</bes-button>
+            <bes-button event="delete-data">Удалить данные</bes-button>
+        </bes-panel>
+        <bes-panel>
+            <bes-button event="activate-coffee">Включить кофеварку</bes-button>
+            <bes-button event="activate-toster">Активировать тостер</bes-button>
         </bes-panel>
     </section>
 </body>

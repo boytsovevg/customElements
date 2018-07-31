@@ -12,7 +12,7 @@ export default (function() {
         <header>
             <nav>
                 <a href="#">
-                    <b-title text="Евгений Бойцов"><b-title>
+                    <b-title text="Рабочий стол"><b-title>
                 </a>
             </nav>
         </header>
