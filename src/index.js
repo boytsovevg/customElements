@@ -1,4 +1,3 @@
-import styles from './styles/styles.scss';
-
-import { Button, Header, Title } from './components';
+import './styles/styles.scss';
+import './components';
 

@@ -2,6 +2,12 @@ import content from './title.template';
 
 export default (function() {
     class Title extends HTMLElement {
+        constructor() {
+            super();
+    
+            this._init();
+        }
+    
         get text() {
             return this.getAttribute('text');
         }
@@ -10,12 +16,6 @@ export default (function() {
             this.setAttribute('text', newText);
         }
         
-        constructor() {
-            super();
-    
-            this._init();
-        }
-    
         _init() {
             this.attachShadow({mode: 'open'});
             this.shadowRoot.appendChild(content.cloneNode(true))
