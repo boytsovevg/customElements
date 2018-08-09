@@ -1,4 +1,5 @@
-import content from './button.template';
+// import template from './button.template';
+import template from './button-styled.template';
 
 export class Button extends HTMLElement {
     constructor() {
@@ -21,14 +22,13 @@ export class Button extends HTMLElement {
 
     _init() {
         this.attachShadow({ mode: 'open' });
-        this.shadowRoot.appendChild(content.cloneNode(true));
+        this.shadowRoot.appendChild(template.content.cloneNode(true));
 
         this.button = this.shadowRoot.querySelector('button');
     }
 
     onClick() {
         this.dispatchEvent(this.events[this.eventName]);
-        this.color = '#0a2e5c';
     }
 
     connectedCallback() {
